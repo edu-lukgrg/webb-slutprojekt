@@ -64,9 +64,7 @@ nav {
   width: 400px;
   margin: 10px;
 }
-
-/* AGENT GRID */
-.agent-grid {
+.content-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
@@ -74,9 +72,7 @@ nav {
   margin: 40px auto 60px;
   padding: 0 30px;
 }
-
-/* AGENT CARD */
-.agent-card {
+.content-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,8 +87,7 @@ nav {
     box-shadow 0.2s ease;
   position: relative;
 }
-
-.agent-card::after {
+.content-card::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -103,37 +98,31 @@ nav {
   transform: scaleX(0);
   transition: transform 0.2s ease;
 }
-
-.agent-card:hover {
+.content-card:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 0, 0, 0.5);
   box-shadow: 0 8px 24px rgba(255, 0, 0, 0.15);
 }
-
-.agent-card:hover::after {
+.content-card:hover::after {
   transform: scaleX(1);
 }
-
-.agent-img-wrap {
+.content-img-wrap {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background-color: #0f1923;
 }
-
-.agent-img-wrap img {
+.content-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
   transition: transform 0.3s ease;
 }
-
-.agent-card:hover .agent-img-wrap img {
+.content-card:hover .content-img-wrap img {
   transform: scale(1.05);
 }
-
-.agent-name {
+.content-name {
   width: 100%;
   padding: 10px 0 12px;
   text-align: center;
@@ -144,4 +133,74 @@ nav {
   text-transform: uppercase;
   font-weight: bold;
   background-color: #1a2535;
+}
+.weapons-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 40px auto 80px;
+  padding: 0 30px;
+  align-items: start;
+}
+
+/* Each category column */
+.weapon-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category-title {
+  color: whitesmoke;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+/* Stack cards vertically inside each column */
+.weapon-col .content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Landscape aspect ratio so weapons look like the reference */
+.weapon-col .content-img-wrap {
+  aspect-ratio: 16 / 7;
+}
+
+.weapon-col .content-img-wrap img {
+  object-position: center;
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .weapons-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .weapons-layout {
+    grid-template-columns: 1fr;
+  }
+}
+footer {
+  background-color: #141212;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  border-top: 2px solid red;
 }
