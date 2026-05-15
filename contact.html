@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/Valorant.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Mountains+of+Christmas:wght@400;700&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="nav-knapp home-btn">Home</a>
+        <div class="nav-center">
+          <a href="agents.html" class="nav-knapp">Agents</a>
+          <a href="maps.html" class="nav-knapp">Maps</a>
+          <a href="weapons.html" class="nav-knapp">Weapons</a>
+        </div>
+        <a href="contact.html" class="nav-knapp contact-btn">Contact</a>
+      </nav>
+    </header>
+    <main class="agent-detail">
+      <h1>CONTACT</h1>
+      <section class="contact-section">
+        <h2>Send us a message</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="What is this about?"
+            />
+          </div>
+          <div class="form-group">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic">
+              <option value="">Select a topic</option>
+              <option value="bug">Bug report</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Write your message here..."
+            ></textarea>
+          </div>
+          <div class="form-group form-group--checkbox">
+            <input type="checkbox" id="agree" name="agree" />
+            <label for="agree">I agree to be contacted back via email</label>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 Super Duper Official Valorant Site</p>
+    </footer>
+  </body>
+</html>
